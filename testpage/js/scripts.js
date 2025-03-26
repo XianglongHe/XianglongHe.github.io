@@ -140,7 +140,7 @@ function createElementFromHTML(htmlString) {
     return div.firstChild;
 }
 
-function add_videos(num_videos = 4) {
+function add_videos(num_videos = 2) {
     let thumbnails = document.getElementById("textToVideos");
     let start = window.start;
 //   videoPaths = videoPaths.slice(0, 3);
@@ -239,4 +239,4 @@ function add_button_logic(element) {
 
 window.start = 0;
 window.activeElements = null;
-add_videos(num_videos = 8)
+add_videos(num_videos = 2)
