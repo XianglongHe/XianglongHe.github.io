@@ -15,26 +15,26 @@
 		<script type="importmap">
 		    {
 		        "imports": {
-		            "three": "https://unpkg.com/three@0.169.0/build/three.module.js",
-		            "three.examples": "https://unpkg.com/three@0.169.0/examples"
+		            "three": "https://unpkg.com/three@0.140.2/build/three.module.js",
+		            "three.examples": "https://unpkg.com/three@0.140.2/examples"
 		        }
 		    }
 		</script>
 
     <script type="module">
-      import * as THREE from "https://unpkg.com/three@0.169.0/build/three.module.js";
-      import { MTLLoader } from "https://unpkg.com/three@0.169.0/examples/jsm/loaders/MTLLoader.js";
-      import { TrackballControls } from "https://unpkg.com/three@0.169.0/examples/jsm/controls/TrackballControls.js";
-      import { DRACOLoader } from 'https://unpkg.com/three@0.169.0/examples/jsm/loaders/DRACOLoader.js';
+      import * as THREE from "https://unpkg.com/three@0.125.2/build/three.module.js";
+      import { MTLLoader } from "https://unpkg.com/three@0.125.2/examples/jsm/loaders/MTLLoader.js";
+      import { TrackballControls } from "https://unpkg.com/three@0.125.2/examples/jsm/controls/TrackballControls.js";
+      import { DRACOLoader } from 'https://unpkg.com/three@0.125.2/examples/jsm/loaders/DRACOLoader.js';
 
-    import { OrbitControls } from "https://unpkg.com/three@0.169.0/examples/jsm/controls/OrbitControls.js";
+    import { OrbitControls } from "https://unpkg.com/three@0.140.2/examples/jsm/controls/OrbitControls.js";
 
     const urlSearchParams = new URLSearchParams(window.location.search);
 		const params = Object.fromEntries(urlSearchParams.entries());
 
 
-    let NUM_FRAMES = (params.nframes === undefined) ? 2 : 2;
-		let MODEL_PATH = 'models/a_squirrel_riding_a_motorcycle_drc/';
+    let NUM_FRAMES = (params.nframes === undefined) ? 63 : params.nframes;
+		let MODEL_PATH = 'models/' + params.sequence + '/';
 		let ALBEDO_FORMAT = '.jpg';
 
 		let camera, scene, renderer, controls;
@@ -50,7 +50,7 @@
 			const textureLoader = new THREE.TextureLoader();
 
 			const dracoLoader = new DRACOLoader();
-			dracoLoader.setDecoderPath('https://unpkg.com/three@0.169.0/examples/js/libs/draco/');
+			dracoLoader.setDecoderPath('https://unpkg.com/three@0.125.2/examples/js/libs/draco/');
 			dracoLoader.preload();
 
 			for (let frameIndex = 0; frameIndex < NUM_FRAMES; frameIndex++) {
