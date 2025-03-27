@@ -120,7 +120,55 @@ Number.prototype.clamp = function (min, max) {
     return Math.min(Math.max(this, min), max);
 };
 
+// 修改后的 preprocess 函数
 function preprocess(element) {
+    return new Promise((resolve) => {
+        const canvasId = element.id + "Merge";  // 注意这里改为 Merge 而不是 _merge
+        const cv = document.getElementById(canvasId);
+        
+        if (!cv) {
+            console.error("Canvas not found:", canvasId);
+            return resolve(element);
+        }
+
+        // 确保视频元数据已加载
+        if (element.readyState >= 2) { // HAVE_METADATA
+            updateCanvasSize();
+        } else {
+            element.onloadedmetadata = updateCanvasSize;
+        }
+
+        function updateCanvasSize() {
+            cv.width = element.videoWidth / 2;
+            cv.height = element.videoHeight;
+            element.play();
+            element.style.height = "0px";
+            resolve(element);
+        }
+    });
+}
+
+// 修改后的 resizeAndPlay 函数
+async function resizeAndPlay(element, videoIds = null) {
+    try {
+        element = await preprocess(element);
+        const all_videoIds = [element.id];
+        
+        if (videoIds) {
+            for (const videoId of videoIds) {
+                const newElement = document.getElementById(videoId);
+                if (newElement) {
+                    await preprocess(newElement);
+                    all_videoIds.push(newElement.id);
+                }
+            }
+        }
+        playVids(all_videoIds);
+    } catch (error) {
+        console.error("Error in resizeAndPlay:", error);
+    }
+}
+function preprocess2(element) {
     var cv = document.getElementById(element.id + "_merge");
     cv.width = element.videoWidth / 2;
     cv.height = element.videoHeight;
@@ -133,8 +181,7 @@ function preprocess(element) {
     return element
 }
 
-
-function resizeAndPlay(element, videoIds = null) {
+function resizeAndPlay2(element, videoIds = null) {
     element = preprocess(element);
     all_videoIds = [element.id]
     if (videoIds) {

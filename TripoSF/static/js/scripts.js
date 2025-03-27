@@ -21,11 +21,12 @@ function add_videos(num_videos = 10) {
             outer.appendChild(caption);
         }
 
-        const video = createElementFromHTML(`<video class="video" id="video${i}" loop autoplay muted playsinline
-           src="${videoAttributes.src}" onPlay="resizeAndPlay(this)"></video>`);
-        video.onplay = () => {
-            resizeAndPlay(video);
-        };
+        const video = createElementFromHTML(`<video class="video" id="video${i}" loop muted playsinline
+            src="${videoAttributes.src}"></video>`);
+        video.addEventListener('loadedmetadata', function() {
+            resizeAndPlay(this);
+        });
+        video.play(); // 尝试自动播放
         outer.appendChild(video);
 
         let componentCanvas = document.createElement("CANVAS")
