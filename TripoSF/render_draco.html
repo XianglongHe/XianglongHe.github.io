@@ -22,10 +22,10 @@
 		</script>
 
     <script type="module">
-      import * as THREE from "https://unpkg.com/three@0.140.2/build/three.module.js";
-      import { MTLLoader } from "https://unpkg.com/three@0.140.2/examples/jsm/loaders/MTLLoader.js";
-      import { TrackballControls } from "https://unpkg.com/three@0.140.2/examples/jsm/controls/TrackballControls.js";
-      import { DRACOLoader } from 'https://unpkg.com/three@0.140.2/examples/jsm/loaders/DRACOLoader.js';
+      import * as THREE from "https://unpkg.com/three@0.125.2/build/three.module.js";
+      import { MTLLoader } from "https://unpkg.com/three@0.125.2/examples/jsm/loaders/MTLLoader.js";
+      import { TrackballControls } from "https://unpkg.com/three@0.125.2/examples/jsm/controls/TrackballControls.js";
+      import { DRACOLoader } from 'https://unpkg.com/three@0.125.2/examples/jsm/loaders/DRACOLoader.js';
 
     import { OrbitControls } from "https://unpkg.com/three@0.140.2/examples/jsm/controls/OrbitControls.js";
 
@@ -50,7 +50,7 @@
 			const textureLoader = new THREE.TextureLoader();
 
 			const dracoLoader = new DRACOLoader();
-			dracoLoader.setDecoderPath('https://unpkg.com/three@0.140.2/examples/js/libs/draco/');
+			dracoLoader.setDecoderPath('https://unpkg.com/three@0.125.2/examples/js/libs/draco/');
 			dracoLoader.preload();
 
 			for (let frameIndex = 0; frameIndex < 1; frameIndex++) {
