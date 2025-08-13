@@ -35,7 +35,7 @@
                 hxl23 AT mails.tsinghua.edu.cn
                 </p>
                 
-                <p>I'm currently a second-year M.S. student at <a href="https://www.sigs.tsinghua.edu.cn/">SIGS, Tsinghua University</a>, advised by Prof. <a href="https://scholar.google.com/citations?user=fYdxi2sAAAAJ">Chun Yuan</a>. I'm now interested in Generative AI and Computer Vision.
+                <p>I'm currently a second-year M.S. student at <a href="https://www.sigs.tsinghua.edu.cn/">SIGS, Tsinghua University</a>, advised by Prof. <a href="https://scholar.google.com/citations?user=fYdxi2sAAAAJ">Chun Yuan</a>. I'm now interested in 3D Generation, Video Generation, and MLLM.
                 </p>
                 
                 <p>Before that, I received my B.S. degree in Computer Science and Technology from Ocean University of China in 2023.
@@ -44,7 +44,7 @@
                 <p><font color="#dd0000">I am actively looking for Ph.D. positions (2026 fall).
                 </p>
                 <p style="text-align:center">
-                  <a href="https://scholar.google.com/citations?user=jKFeol0AAAAJ">Scholar</a>
+                  <a href="https://scholar.google.com/citations?user=jKFeol0AAAAJ">Scholar</a> &nbsp;
                 </p>
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
@@ -75,6 +75,71 @@
 
               <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
                 
+                <tr onmouseout="matrixgamev2_stop()" onmouseover="matrixgamev2_start()" bgcolor="#ffffd0">
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='matrixgamev2_image'><video  width=140 height=140 muted autoplay loop>
+                      <source src="images/matrixgamev2.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                      </video></div>
+                      <img src='images/matrixgamev2.jpg' width="140">
+                    </div>
+                    <script type="text/javascript">
+                      function matrixgamev2_start() {
+                        document.getElementById('matrixgamev2_image').style.opacity = "1";
+                      }
+
+                      function matrixgamev2_stop() {
+                        document.getElementById('matrixgamev2_image').style.opacity = "0";
+                      }
+                      matrixgamev2_stop()
+                    </script>
+                  </td>
+                  <td width="75%" valign="middle">
+                    <a href="https://github.com/SkyworkAI/Matrix-Game/blob/main/Matrix-Game-2/assets/pdf/report.pdf" id="matrixgamev2">
+                      <span class="papertitle">Matrix-Game 2.0: An Open-Source, Real-Time, and Streaming Interactive World Model</span>
+                    </a>
+                    <br>
+                        <strong>Xianglong He</strong>*,
+                        <a>Chunli Peng*</a>,
+                        <a href="https://scholar.google.com/citations?user=bkPJckwAAAAJ">Zexiang Liu*</a>,
+                        <a>Boyang Wang*†</a>, ...,
+                        <a>Yang Liu‡</a>
+                        <a>Eric Li‡</a>,
+                        <a>Yahui Zhou</a>
+                    <br>
+                    <em>Tech Report</em>, 2025
+                    <br>
+                    <a href="https://matrix-game-v2.github.io">Project Page</a>
+                    /
+                    <a href="https://github.com/SkyworkAI/Matrix-Game/blob/main/Matrix-Game-2/assets/pdf/report.pdf">Tech Report</a>
+                    /
+                    <a href="https://github.com/SkyworkAI/Matrix-Game/">Code</a>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <img src="images/shapegen.png" alt="shapegen" width="140" height="80" style="border-style: none">
+                  </td>
+                  <td width="75%" valign="middle">
+                    <a id="shapegen">
+                      <span class="papertitle">ShapeGen: Towards High-Quality 3D Shape Synthesis</span>
+                    </a>
+                    <br>
+                        <a href="https://scholar.google.com/citations?user=a7AMvgkAAAAJ">Yangguang Li*</a>,
+                        <strong>Xianglong He</strong>*,
+                        <a href="https://scholar.google.com/citations?user=5TEI1eAAAAAJ">Zi-Xin Zou</a>,
+                        <a href="https://scholar.google.com/citations?user=bkPJckwAAAAJ">Zexiang Liu</a>,
+                        <a href="https://wlouyang.github.io/">Wanli Ouyang</a>,
+                        <a href="https://scholar.google.com/citations?user=Dqjnn0gAAAAJ">Ding Liang</a>,
+                        <a href="https://yanpei.me/">Yan-Pei Cao</a>
+                    <br>
+                    <em>Siggraph Asia</em>, 2025
+                    <br>
+                    On Camera-Ready
+                  </td>
+                </tr>
 
 
                 <tr>
@@ -106,7 +171,7 @@
 
 
                 
-                <tr>
+                <tr bgcolor="#ffffd0">
                   <td style="padding:20px;width:25%;vertical-align:middle"> 
                     <img src="images/sparseflex.png" alt="sparseflex" width="140" height="160" style="border-style: none">
                   </td>
@@ -173,7 +238,7 @@
                     <img src="images/nova3d.png" alt="nova3d" width="160" height="160" style="border-style: none">
                   </td>
                   <td width="75%" valign="middle">
-                    <!-- <a href="https://arxiv.org/" id="nova3d"> -->
+                    <a href="https://arxiv.org/abs/2506.07698" id="nova3d">
                       <span class="papertitle">NOVA3D: Normal Aligned Video Diffusion Model for Single Image to 3D Generation</span>
                     </a>
                     <br>
@@ -185,8 +250,7 @@
                     <br>
                     <em>ICME</em>, 2025 (<font color="#dd0000">Best Paper Candidate</font>, 15/3737)
                     <br>
-                    On Camera-ready
-                    <!-- <a href="https://arxiv.org/"></a> -->
+                    <a href="https://www.arxiv.org/abs/2506.07698">arXiv</a>
                   </td>
                 </tr>
                 
@@ -267,7 +331,7 @@
                         <a href="https://mmlab.siat.ac.cn/yuqiao">Yu Qiao</a>,
                         <a href="https://wlouyang.github.io/">Wanli Ouyang</a>
                     <br>
-                    <em>arXiv</em>, 2023
+                    <em>TPAMI</em>, 2025
                     <br>
                     <a href="https://arxiv.org/abs/2310.08586">arXiv</a>
                     /
@@ -295,10 +359,29 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/vast.png" alt="ailab" width="160" height="160" style="border-style: none">
+                <img src="images/skywork.png" alt="skywork" width="160" height="40" style="border-style: none">
               </td>
               <td width="75%" valign="middle">
-                <div style="float:right; text-align:right"><em>2024.11 - Present</em></div>
+                <div style="float:right; text-align:right"><em>2025 - 2025</em></div>
+                <strong>Algorithm Intern</strong>
+                <br>
+                <strong>Skywork</strong>
+                
+                <br>
+                    <li>host by <a href="https://eric_li.github.io/">Eric Li</a>, and <a href="https://yliuu.com">Yang Liu</a>.<div class=""></div>
+                    </li>
+                    <li>Topic: World Model.
+                    </li>
+              </td>
+            </tr>
+
+            
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="images/vast.png" alt="vast" width="160" height="160" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <div style="float:right; text-align:right"><em>2024 - 2025</em></div>
                 <strong>Algorithm Intern</strong>
                 <br>
                 <strong>VAST</strong>
@@ -306,7 +389,7 @@
                 <br>
                     <li>host by <a href="https://yg256li.github.io/">Yangguang Li</a>, and <a href="https://yanpei.me/">Yan-Pei Cao</a>, working closely with <a href="https://scholar.google.com/citations?user=5TEI1eAAAAAJ">Zi-Xin Zou</a>.<div class=""></div>
                     </li>
-                    <li>Topic: Mesh Generation on new versions of Tripo (i.e. Tripo v3).
+                    <li>Topic: Mesh Generation on Tripo 3.0 Exploration.
                     </li>
               </td>
             </tr>
@@ -317,7 +400,7 @@
                 <img src="images/shanghaiailab.jpg" alt="ailab" width="160" height="160" style="border-style: none">
               </td>
               <td width="75%" valign="middle">
-                <div style="float:right; text-align:right"><em>2023.01 - 2024.06</em></div>
+                <div style="float:right; text-align:right"><em>2023 - 2024</em></div>
                 <strong>Research Intern</strong>
                 <br>
                 <strong>GVLAB @ Shanghai AI Laboratory</strong>
@@ -329,7 +412,7 @@
                     <a href="https://yg256li.github.io/">Yangguang Li</a>
                     and <a href="http://tonghe90.github.io/">Tong He</a>.
                     </li>
-                    <li>Topic: 3D Generation, 3D Reconstruction.
+                    <li>Topic: 3D Generation, and 3D Reconstruction.
                     </li>
               </td>
             </tr>
@@ -406,6 +489,7 @@
                     <div style="float:right; text-align:right"><em>2021</em></div>
                 </li>
                 <br>
+                
                 <li> Lanqiao Programming Designing Contest (Python A Group), Second Prize
                     <div style="float:right; text-align:right"><em>2022</em></div>
                 </li>
@@ -414,6 +498,10 @@
                 </li>
                 <li> Lanqiao Programming Designing Contest (C++ A Group), Second Prize
                     <div style="float:right; text-align:right"><em>2020</em></div>
+                </li>
+                <br>
+                <li> National Olympiad in Informatics in Provinces (NOIP), Sichuan Provincial First Prize
+                    <div style="float:right; text-align:right"><em>2017</em></div>
                 </li>
                 
                 
