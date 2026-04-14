@@ -76,6 +76,58 @@
               
               <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+                
+                <tr onmouseout="matrixgamev3_stop()" onmouseover="matrixgamev3_start()"> <!--- #ffffd0 --->
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='matrixgamev3_image'><video  width=140 height=140 muted autoplay loop>
+                      <source src="images/mg3_demo.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                      </video></div>
+                      <img src='images/mg3_demo.jpg' width="140">
+                    </div>
+                    <script type="text/javascript">
+                      function matrixgamev3_start() {
+                        document.getElementById('matrixgamev3_image').style.opacity = "1";
+                      }
+
+                      function matrixgamev3_stop() {
+                        document.getElementById('matrixgamev3_image').style.opacity = "0";
+                      }
+                      matrixgamev3_stop()
+                    </script>
+                  </td>
+                  <td width="75%" valign="middle">
+                    <a href="https://arxiv.org/abs/2604.08995" id="matrixgamev2">
+                      <span class="papertitle">Matrix-Game 3.0: Real-Time and Streaming Interactive World Model with Long-Horizon Memory</span>
+                    </a>
+                    <br>
+                        <a href="https://scholar.google.com/citations?user=2ernC30AAAAJ">Zile Wang*</a>,
+                        <a href="https://scholar.google.com/citations?user=bkPJckwAAAAJ">Zexiang Liu*</a>,
+                        <a href="https://scholar.google.com/citations?user=LNtaU5YAAAAJ">Jiaxing Li*</a>,
+                        <a href="https://www.lamda.nju.edu.cn/huangkc/">Kaichen Huang*</a>,
+                        <a href="https://xubaixinxbx.github.io">Baixin Xu*</a>,
+                        ...,
+                        <strong>Xianglong He†</strong>,
+                        <a>Yang Liu†‡</a>
+                        <a>Yangguang Li†‡</a>,
+                        <a>Yahui Zhou</a>
+                    <br>
+                    <em>Tech Report</em>, 2025
+                    <br>
+                    <a href="https://matrix-game-v3.github.io">Project Page</a>
+                    /
+                    <a href="https://arxiv.org/abs/2604.08995">Tech Report</a>
+                    /
+                    <a href="https://github.com/SkyworkAI/Matrix-Game/">Code</a>
+                  </td>
+                </tr>
+
+
+
+
+
+
 
 
                 <tr>
@@ -173,7 +225,7 @@
                     </script>
                   </td>
                   <td width="75%" valign="middle">
-                    <a href="https://github.com/SkyworkAI/Matrix-Game/blob/main/Matrix-Game-2/assets/pdf/report.pdf" id="matrixgamev2">
+                    <a href="https://arxiv.org/abs/2508.13009" id="matrixgamev2">
                       <span class="papertitle">Matrix-Game 2.0: An Open-Source, Real-Time, and Streaming Interactive World Model</span>
                     </a>
                     <br>
@@ -189,7 +241,7 @@
                     <br>
                     <a href="https://matrix-game-v2.github.io">Project Page</a>
                     /
-                    <a href="https://github.com/SkyworkAI/Matrix-Game/blob/main/Matrix-Game-2/assets/pdf/report.pdf">Tech Report</a>
+                    <a href="https://arxiv.org/abs/2508.13009">Tech Report</a>
                     /
                     <a href="https://github.com/SkyworkAI/Matrix-Game/">Code</a>
                     /
